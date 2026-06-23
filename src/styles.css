@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #38241b;
+  background: #f8eedc;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(185, 133, 53, 0.15), transparent 28%),
+    radial-gradient(circle at 18% 18%, rgba(135, 82, 53, 0.24), transparent 27%),
+    linear-gradient(180deg, #fffaf1 0%, #e8d1b4 100%);
+}
+
+body :is(h1, h2, h3, h4, h5, h6, p, span, a, label, button, input, textarea, select) {
+  color: #38241b !important;
+}
+
+body input::placeholder,
+body textarea::placeholder {
+  color: rgba(56, 36, 27, 0.58) !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-[28px] border border-[#d7b99b]/70 bg-[#fffaf3]/80 backdrop-blur-xl shadow-soft;
+  }
+
+  .gold-outline {
+    @apply border border-gold/40 shadow-glow;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
